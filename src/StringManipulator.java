@@ -7,9 +7,10 @@ public class StringManipulator
 		for(int i=0; i<str1.length(); i++)
 		{
 			char letter = str1.charAt(i);
-			if  (letter == 'a' ||letter == 'e' ||letter == 'i' ||letter == 'o' ||letter == 'u' ||letter == 'A' ||letter == 'E' ||letter == 'I' ||letter == 'O' ||letter == 'U'); 
-					letter = '*';
-			str2 += letter;
+			if  (letter == 'a' ||letter == 'e' ||letter == 'i' ||letter == 'o' ||letter == 'u' ||letter == 'A' ||letter == 'E' ||letter == 'I' ||letter == 'O' ||letter == 'U') 
+				str2 += '*';
+			else
+				str2 += letter;
 		}
 		return str2;
 	}
@@ -17,7 +18,7 @@ public class StringManipulator
 	public String reverse(String  str1)
 	{
 		String str2 = "";
-		for(int i=0; i<str1.length(); i--)
+		for(int i=str1.length()-1; i>=0; i--)
 		{
 			char letter = str1.charAt(i);
 			str2 += letter;
